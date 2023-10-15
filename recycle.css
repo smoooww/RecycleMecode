@@ -1,0 +1,288 @@
+* {
+    font-family: "Open Sans", sans-serif;
+}
+body {
+    max-width: 100%;
+    margin: 0;
+}
+.menu-main {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu-main:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .right-item {
+    float: right;
+  }
+  
+  .menu-main a {
+    text-decoration: none;
+    display: block;
+    line-height: 70px;
+    padding: 0 40px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    color: black;
+    transition: 0.3s linear;
+  }
+  .menu-main a:hover {
+    background-color: rgba(159, 255, 85, 0.834);
+    color: white;
+  }
+  .top-menu {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    right: 0;
+  }
+.bgimg {
+    height: 100vh;
+    max-width: 100%;
+    background-image: url('plasticbackgr.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.heading {
+    display: flex;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+h1 {
+    font-size: 80px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.questions {
+    font-size: 30px;
+    width: 70%;
+}
+.title {
+    display: flex;
+    justify-content: center;
+}
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.box-par {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    align-items: center;
+    align-self: center;
+    margin-top: 30px;
+    width: 100%;
+}
+.text-container {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-left: 20px;
+    font-size: 22px;
+    border-left: 1px solid black;
+    width: 65%;
+}
+.hiddenRight {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1.5s;
+}
+.showRight {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.itemOne {
+    transition-delay: 100ms;
+}
+.itemTwo {
+    transition-delay: 180ms;
+}
+.itemThree {
+    transition-delay: 260ms;
+}
+.itemFour {
+    transition-delay: 320ms;
+}
+.marks-container {
+    display: flex;
+    align-items: center;
+}
+.bgimgTwo {
+    height: 100vh;
+    max-width: 100%;
+    background-image: url('plasticrecycle.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.numbers-text {
+    font-size: 23px;
+    width: 65%;
+}
+.box-recycling {
+
+    background-color: rgba(0, 0, 0, 0.448);
+}
+h2 {
+    font-size: 45px;
+    width: 75%;
+}
+.main-container {
+    margin-top: 30px;
+}
+.marks {
+overflow: hidden;
+display: flex;
+padding: 30px
+}
+.change-colorGreen:hover {
+    background-color: rgba(135, 254, 151, 0.425);
+    transition: 1.2s;
+}
+.change-colorRed:hover {
+    background-color: rgba(254, 112, 112, 0.425);
+    transition: 1.2s;
+}
+.change-colorYellow:hover {
+    background-color: rgba(248, 254, 135, 0.425);
+    transition: 1.2s;
+}
+.markOne:hover {
+    transform: rotate(360deg); 
+    transition: 3s;
+} 
+.markOne:not(:hover) {
+    transform: rotate(-360deg); 
+    transition: 3s;
+}
+.markOne:hover .item {
+    opacity: 1;
+}
+.elements-box {
+    opacity: 0;
+} 
+
+.number:hover + .elements-box{
+    opacity: 1;
+    transition: 1.9s;
+    transform: translateX(20%);
+}
+.element {
+    padding: 10px;
+}
+.number:not(:hover) + .elements-box {
+    transition: 2s;
+}
+h3 {
+    font-size: 26px;
+}
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-left: 1px solid black;
+    width: 90%;
+    padding-left: 20px;
+}
+.text-recycle {
+    font-size: 22px;
+}
+
+@media all and (max-width: 500px) {
+    h1 {
+        font-size: 50px;
+        letter-spacing: 0px;
+    }
+    .questions {
+        font-size: 22px;
+        width: 80%;
+    }
+    .menu-main {
+        justify-content: flex-start;
+    }
+    .menu-main a {
+        line-height: 50px;
+        padding: 0 20px;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+    .box-par {
+        flex-direction: column;
+    }
+    .seal, .turtle {
+        width: 330px;
+        height: 310px;
+        align-self: center;
+        margin-right: 50px;
+    }
+    h2 {
+        font-size: 22px;
+        width: 85%;
+    }
+    .text-container {
+        width: 100%;
+    }
+    .text-danger {
+        font-size: 18px;
+        width: 80%;
+    }
+    .numbers-text {
+        font-size: 18px;
+        width: 75%;
+    }
+    .marks {
+        display: flex;
+        flex-direction: column;
+    }
+    .markOne {
+        width: 130px;
+        height: 160px;
+    }
+    .element {
+        width: 80px;
+        height: 100px;
+    }
+    h3 {
+        font-size: 22px;
+        width: 85%;
+    }
+    .text-recycle {
+        font-size: 18px;
+        width: 85%;
+    }
+}
+@media all and (max-width: 800px) {
+    h2 {
+        font-size: 35px;
+    }
+    .menu-main {
+        justify-content: flex-start;
+    }
+}
